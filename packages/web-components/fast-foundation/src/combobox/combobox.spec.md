@@ -8,15 +8,15 @@ As defined by the [W3C](https://w3c.github.io/aria-practices/#combobox):
 ### Use Cases
 
 - *A customer using the component on a web page.*
-On a web page a customer is providing their mailing address for an order form. The customer clicks the state `<fast-combobox>` and sees a list of options. The customer begins typing their state and the field is automatically populated with the closest matching state. Then, the customer uses the arrow keys to highlight their state and presses `enter` to commit the value to the combobox.
+On a web page a customer is providing their US mailing address for an order form. The customer clicks a `<fast-combobox>` to fill in their state (California, Ohio, etc.) and sees a list of options. The customer begins typing the state name and the field is automatically populated with the closest matching state. Then, the customer uses the arrow keys to highlight their state and presses `enter` to commit the value to the combobox.
 
 ### Features
 
 - **Form association**: The `combobox` is [form-associated](../form-associated/form-associated-custom-element.spec.md), allowing its selected or user-provided value to be submitted with a form.
 - **Autocomplete and Autoselection**: Supports `inline`, `list`, and `both` values for `autocomplete`:
-  - `inline`: automatically fills the value of the first matching option while typing, and highlights the auto-inserted text. While a value is present, navigating through the list will automatically jump to partially-matching options.
-  - `list`: auto-filters the available options to only display those which start with the current value.
-  - `both`: automatically filters the list and fills the remaining text for the currently selected option.
+  - `inline`: Automatically fills the value of the first matching option while typing, and highlights the auto-inserted text. While a value is present, navigating through the list will automatically jump to partially-matching options.
+  - `list`: Auto-filters the available options to only display those which start with the current value.
+  - `both`: Automatically filters the list and fills the remaining text for the currently selected option.
 - **Opened and closed states**: The `combobox` provides an expandable listbox can be displayed by clicking on the element, or using keyboard navigation.
 - **Positioning**: When the `combobox` does not have enough screen real estate to open below the control, it will open above.
 - **Single and multiple selection mode**: Users can choose one or multiple options when the `multiple` attribute is present. *(Note: While our implementation currently only supports single selection mode, multiple selection mode is being tracked in [issue #4190](https://github.com/microsoft/fast/issues/4190).)*
@@ -59,25 +59,25 @@ Extends [`listbox`](../listbox/listbox.spec.md) and [form associated custom elem
 
 *Events*:
 
-- `change` - emits when the `value` is changed via user interaction.
+- `change` - Emits when the `value` is changed via user interaction.
 
 *Slots*:
 
-- *default* - the list of options, either `<fast-option>` or elements with `role="option"`.
-- `control` - contains the selected value and indicator slots inside the control element.
-  - `indicator` - holds the glyph indicating that the combobox can be expanded. This slot is only available if the `control` slot is not filled.
-- `start` - used to display content like glyphs or icons inside the button, before the control.
-- `end` - used to display content like glyphs or icons inside the button, after the control.
+- *default* - The list of options, either `<fast-option>` or elements with `role="option"`.
+- `control` - Contains the selected value and indicator slots inside the control element.
+  - `indicator` - Holds the glyph indicating that the combobox can be expanded. This slot is only available if the `control` slot is not filled.
+- `start` - Used to display content like glyphs or icons inside the button, before the control.
+- `end` - Used to display content like glyphs or icons inside the button, after the control.
 
 *Parts*:
 
-- `control` - the container that holds the `start`, `end`, `control`, and `indicator` slots.
-- `indicator` - the container that holds the `select-indicator` slot.
-- `select-indicator` - the default SVG icon present the `indicator` slot.
+- `control` - The container that holds the `start`, `end`, `control`, and `indicator` slots.
+- `indicator` - The container that holds the `select-indicator` slot.
+- `select-indicator` - The default SVG icon present the `indicator` slot.
 - `listbox` - The container that represents the listbox popup.
-- `selected-value` - the container that holds the displayed text for the button.
-- `start` - the container that holds the `start` slot.
-- `end` - the container that holds the `end` slot.
+- `selected-value` - The container that holds the displayed text for the button.
+- `start` - The container that holds the `start` slot.
+- `end` - The container that holds the `end` slot.
 
 ### Anatomy and Appearance
 
@@ -138,7 +138,7 @@ Extends [`listbox`](../listbox/listbox.spec.md) and [form associated custom elem
 - `required` - The `<fast-combobox>` must have a user-provided value when the `required` attribute is set to `true`.
 - `valid` - The `<fast-combobox>` meets all its validation constraints, and is therefore considered to be valid.
 - `invalid` - The `<fast-combobox>` does not meet its validation constraints, and is therefore considered to be invalid.
-- `disabled` - when disabled, the value will not be changeable through user interaction.
+- `disabled` - When disabled, the value will not be changeable through user interaction.
 
 ### Accessibility
 
