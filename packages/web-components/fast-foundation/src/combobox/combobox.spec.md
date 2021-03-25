@@ -19,7 +19,6 @@ On a web page a customer is providing their US mailing address for an order form
   - `both`: Automatically filters the list and fills the remaining text for the currently selected option.
 - **Opened and closed states**: The `combobox` provides an expandable listbox can be displayed by clicking on the element, or using keyboard navigation.
 - **Positioning**: When the `combobox` does not have enough screen real estate to open below the control, it will open above.
-- **Single and multiple selection mode**: Users can choose one or multiple options when the `multiple` attribute is present. *(Note: While our implementation currently only supports single selection mode, multiple selection mode is being tracked in [issue #4190](https://github.com/microsoft/fast/issues/4190).)*
 - **Keyboard navigation and type-ahead**: When the `combobox` is focused, keyboard navigation with the arrow keys will cycle through the available options. Type-ahead is also supported. See [Combobox Keyboard Interaction](https://w3c.github.io/aria-practices/#combobox-keyboard-interaction) for more details.
 
 ### Prior Art/Examples
@@ -44,7 +43,6 @@ Extends [`listbox`](../listbox/listbox.spec.md) and [form associated custom elem
 
 - `autocomplete` - Handles autocomplete features for the control on pageload. Accepted values are `none`, `inline`, `list`, and `both`.
 - `disabled` - Disables the control.
-- `multiple` - Allows the user to select more than one option.
 - `name` - Name of the control.
 - `position` - The placement for the listbox when the combobox is open. Values may be either `above` or `below`.
 - `required` - Boolean value that sets the field as required.
