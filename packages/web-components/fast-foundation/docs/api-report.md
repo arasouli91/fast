@@ -88,6 +88,8 @@ export class AnchoredRegion extends FASTElement {
     adoptedCallback(): void;
     anchor: string;
     anchorElement: HTMLElement | null;
+    // (undocumented)
+    autoUpdateMode: AutoUpdateMode;
     // @internal (undocumented)
     connectedCallback(): void;
     // @internal (undocumented)
@@ -148,6 +150,9 @@ export class ARIAGlobalStatesAndProperties {
 }
 
 // @beta
+export type AutoUpdateMode = "anchor" | "auto";
+
+// @beta
 export type AxisPositioningMode = "uncontrolled" | "locktodefault" | "dynamic";
 
 // @beta
@@ -170,7 +175,7 @@ export class BaseProgress extends FASTElement {
     max: number;
     min: number;
     paused: any;
-    value: number;
+    value: number | null;
 }
 
 // @public
