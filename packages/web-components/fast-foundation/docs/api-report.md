@@ -1488,6 +1488,8 @@ export class Picker extends FASTElement {
     defaultSelection: string;
     // (undocumented)
     disconnectedCallback(): void;
+    // (undocumented)
+    dynamicMenuPositioning: boolean;
     fixedPlacement: boolean;
     // (undocumented)
     handleFocusIn: (e: FocusEvent) => boolean;
@@ -1598,7 +1600,7 @@ export class PickerMenu extends FASTElement {
     }
 
 // @public (undocumented)
-export type PickerMenuPosition = "top" | "bottom" | "dynamic";
+export type PickerMenuPosition = "top" | "bottom";
 
 // @public
 export const ProgressRingTemplate: ViewTemplate<BaseProgress>;
