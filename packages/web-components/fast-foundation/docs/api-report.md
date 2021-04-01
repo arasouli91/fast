@@ -1473,7 +1473,6 @@ export type ParentLocator = (owner: any) => Container | null;
 
 // @public
 export class Picker extends FASTElement {
-    autoUpdateInterval: number;
     // Warning: (ae-incompatible-release-tags) The symbol "autoUpdateMode" is marked as @public, but its signature references "AutoUpdateMode" which is marked as @beta
     //
     // (undocumented)
@@ -1491,6 +1490,8 @@ export class Picker extends FASTElement {
     // (undocumented)
     dynamicMenuPositioning: boolean;
     fixedPlacement: boolean;
+    // (undocumented)
+    handleClick: (e: MouseEvent) => boolean;
     // (undocumented)
     handleFocusIn: (e: FocusEvent) => boolean;
     // (undocumented)
@@ -1533,6 +1534,7 @@ export class Picker extends FASTElement {
     menuOpen: boolean;
     // (undocumented)
     menuPosition: PickerMenuPosition;
+    menuVerticalThreshold: number;
     // (undocumented)
     noSuggestionsText: string;
     // (undocumented)
